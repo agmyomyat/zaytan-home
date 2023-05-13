@@ -13,7 +13,8 @@
     "start": "next start",
     "lint": "next lint",
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "types": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/css": "^11.10.6",
@@ -25,7 +26,6 @@
     "@mantine/form": "^6.0.8",
     "@mantine/hooks": "^6.0.7",
     "@mantine/next": "^6.0.7",
-    "@tabler/icons-react": "^2.15.0",
     "clsx": "^1.2.1",
     "embla-carousel-react": "^7.1.0",
     "next": "^13.4.1",

@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+data
+storybook-static
+.next
+.storybook
+public

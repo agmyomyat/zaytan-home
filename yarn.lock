@@ -3044,19 +3044,6 @@
   dependencies:
     tslib "^2.4.0"
 
-"@tabler/icons-react@^2.15.0":
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/@tabler/icons-react/-/icons-react-2.18.0.tgz#c72aa31fb32edb513eb5e4e41a84a6d6870d84c5"
-  integrity sha512-F4HyBIoC3DvIPmjP9ienurvSWhQOajDuTc3C5F7UfjhBkom3cAuJfDWH2tqGAfNrhjvG4X3ERR2dxOWLpegsiA==
-  dependencies:
-    "@tabler/icons" "2.18.0"
-    prop-types "^15.7.2"
-
-"@tabler/icons@2.18.0":
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.18.0.tgz#2a96983c53665181f2b24691d07166f0bee5a2cd"
-  integrity sha512-N7a20mwbhrFXNqvd8Rxa0Btwu1Li5rQbqdIi3mzt5HRjP25PbyYuTU2BXbu8yMEnUk018Gi13gpS/jlMgXFuOw==
-
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/@types/eslint-scope/-/eslint-scope-3.7.4.tgz#37fc1223f0786c39627068a12e94d6e6fc61de16"
