@@ -1,6 +1,5 @@
 import { Button, Anchor, MantineSize, ButtonProps } from '@mantine/core';
 import { HTMLAttributeAnchorTarget } from 'react';
-import tw from 'twin.macro';
 export const ButtonLink: React.FC<
   {
     children: React.ReactNode;
@@ -13,7 +12,7 @@ export const ButtonLink: React.FC<
   return (
     <Button
       size={size || 'md'}
-      styles={{ root: tw`hover:!bg-gray-700 bg-gray-900 rounded-lg` }}
+      classNames={{ root: 'hover:!bg-gray-700 bg-gray-900 rounded-lg' }}
       {...rest}
     >
       <Anchor

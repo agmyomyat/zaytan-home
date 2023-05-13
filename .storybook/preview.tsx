@@ -12,11 +12,10 @@ export const parameters = {
 	},
 };
 
-function ThemeWrapper(props) {
+function ThemeWrapper(props:any) {
 	return (
 		<MantineProvider
 			theme={{
-				theme: { theme },
 				colorScheme: "light",
 			}}
 			withGlobalStyles
@@ -27,4 +26,4 @@ function ThemeWrapper(props) {
 	);
 }
 
-export const decorators = [renderStory => <ThemeWrapper>{renderStory()}</ThemeWrapper>];
+export const decorators = [(renderStory: () => any) => <ThemeWrapper>{renderStory()}</ThemeWrapper>];

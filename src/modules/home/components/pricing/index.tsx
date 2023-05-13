@@ -4,10 +4,8 @@ import { StarterPlan } from './plans/starter';
 import { PricingCard } from './pricing-card';
 import { AdvancePlan } from './plans/advance';
 import { PricingHeader } from './header';
-import tw from 'twin.macro';
 
 export function Pricing() {
-  const { classes } = useStyles();
   return (
     <>
       <div className="flex justify-center my-20">
@@ -27,6 +25,6 @@ export function Pricing() {
     </>
   );
 }
-const useStyles = createStyles(() => ({
-  cardContainer: tw`lg:w-1/3 w-full `,
-}));
+const classes = {
+  cardContainer: 'lg:w-1/3 w-full ',
+};

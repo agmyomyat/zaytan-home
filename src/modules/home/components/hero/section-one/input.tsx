@@ -1,6 +1,5 @@
 import { Button, TextInput } from '@mantine/core';
 import { useState } from 'react';
-import tw from 'twin.macro';
 interface Props {
   onClick: (value: string) => void;
 }
@@ -9,9 +8,9 @@ export function SectionOneInput(props: Props) {
   return (
     <div className="flex gap-2 flex-col sm:flex-row">
       <TextInput
-        styles={{
-          root: tw` w-full sm:w-80 `,
-          input: tw`py-5 focus-within:border-black`,
+        classNames={{
+          root: ` w-full sm:w-80 `,
+          input: `py-5 focus-within:border-black`,
         }}
         placeholder="Enter your email"
         onChange={(e) => setState(e.target.value)}

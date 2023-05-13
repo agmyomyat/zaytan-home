@@ -1,6 +1,5 @@
 import ZayTanIcon from '@/fundanmentals/icons/zaytan-icon';
 import { Drawer, NavLink, Text } from '@mantine/core';
-import tw from 'twin.macro';
 import { DrawerContent } from './content';
 import { DrawerFooter } from './footer';
 interface DrawerProps {
@@ -15,9 +14,9 @@ export function NavDrawer(props: DrawerProps) {
       overlayProps={{ opacity: 0.5, blur: 4 }}
       size={'lg'}
       title={<Header />}
-      styles={{
-        header: tw`flex justify-between border-gray-100 border-0 border-solid border-b-[2px]`,
-        close: tw` text-black w-10 h-8`,
+      classNames={{
+        header: `flex justify-between border-gray-100 border-0 border-solid border-b-[2px]`,
+        close: ` text-black w-10 h-8`,
       }}
     >
       <div className="flex flex-col">
@@ -25,7 +24,7 @@ export function NavDrawer(props: DrawerProps) {
           pricing={
             <NavLink
               label="Pricing"
-              styles={{ label: tw`text-2xl` }}
+              classNames={{ label: `text-2xl` }}
               component="a"
               onClick={() => {
                 props.close();
