@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <HeroSectionOne />
-      <div className="w-full bg-gradient-to-br from-orange-200 to-orange-100 overflow-hidden">
+      <div className={twClasses.sectionTwoBgContainer}>
         <div className="xl:mx-52 mx-5 my-28">
           <HeroSectionTwo />
         </div>
@@ -17,7 +17,7 @@ export default function Home() {
       <div className="py-20">
         <HeroSectionThree />
       </div>
-      <div className={classes.pricingBgContainer}>
+      <div className={twClasses.pricingBgContainer}>
         <div className="m-5">
           <Pricing />
         </div>
@@ -25,7 +25,7 @@ export default function Home() {
     </>
   );
 }
-const classes = {
-  sectionTwoBgContainer: `w-full  bg-gray-50 overflow-hidden`,
-  pricingBgContainer: `w-full bg-gradient-to-br from-orange-200 to-orange-100 overflow-hidden`,
+const twClasses = {
+  sectionTwoBgContainer: `w-full bg-gray-50 overflow-hidden`,
+  pricingBgContainer: `w-full bg-orange-200 overflow-hidden`,
 };

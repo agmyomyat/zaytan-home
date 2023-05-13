@@ -10,8 +10,6 @@ module.exports = {
       colors: {
         primary: '#f1f5f9',
         sencondary: '#F67C31',
-        electric: '#db00ff',
-        ribbon: '#0047ff',
       },
     },
   },
