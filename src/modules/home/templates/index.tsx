@@ -5,8 +5,10 @@ import {
   HeroSectionTwo,
 } from '../components/hero';
 import { Pricing } from '../components/pricing';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
   const pricingRef = useRef<HTMLDivElement>(null);
   // this is some hacky way to make sure that the hash changes to the correct section
   useEffect(() => {
@@ -26,7 +28,7 @@ export default function Home() {
       <HeroSectionOne />
       <div className={twClasses.sectionTwoBgContainer}>
         <div className="xl:mx-52 mx-5 my-28">
-          <HeroSectionTwo />
+          <HeroSectionTwo router={router} />
         </div>
       </div>
       <div className="py-20">

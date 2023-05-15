@@ -1,6 +1,5 @@
 import { Text } from '@mantine/core';
-import { SectionTwoSignUpButton } from './sign-up-button';
-export function HeroSectionTwoHeader() {
+export function HeroSectionTwoHeader(props: { getStartedButton: JSX.Element }) {
   return (
     <div className="flex flex-col space-y-6">
       <Text
@@ -13,8 +12,7 @@ export function HeroSectionTwoHeader() {
       >
         Get you own store and start selling
       </Text>
-
-      <SectionTwoSignUpButton />
+      {props.getStartedButton}
     </div>
   );
 }
