@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { DesktopNav as DesktopNav_ } from '.';
 import { Transition } from '@mantine/core';
+import { NextRouter } from 'next/router';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -26,7 +27,7 @@ function DesktopNav() {
   return (
     <>
       <div className="fixed w-full top-0">
-        <DesktopNav_ />
+        <DesktopNav_ router={{} as NextRouter} />
       </div>
       <div className="mt-32">
         {Array.from(Array(5)).map((_, index) => (
@@ -47,7 +48,7 @@ function WithTransition_({ open }: { open: boolean }) {
     >
       {(styles) => (
         <div style={styles}>
-          <DesktopNav_ />
+          <DesktopNav_ router={{} as NextRouter} />
         </div>
       )}
     </Transition>

@@ -4,11 +4,15 @@ import { Text, Anchor } from '@mantine/core';
 
 import { NavBar } from '../nav-bar';
 import { DemoMenu } from './demo-menu';
-export function DesktopNav() {
+import { type NextRouter } from 'next/router';
+export function DesktopNav(props: { router: NextRouter }) {
   return (
     <NavBar>
       <NavBar.LeftSide>
-        <div className="flex gap-1">
+        <div
+          className="flex gap-1 hover:cursor-pointer"
+          onClick={() => props.router.push('/')}
+        >
           <ZayTanIcon size={30} />
           <Text
             fz={20}
