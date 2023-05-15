@@ -1,7 +1,8 @@
 import ZayTanIcon from '@/fundanmentals/icons/zaytan-icon';
-import { Drawer, NavLink, Text } from '@mantine/core';
+import { Drawer, NavLink, Text, clsx } from '@mantine/core';
 import { DrawerContent } from './content';
 import { DrawerFooter } from './footer';
+import { isServer } from '@/utils/is-server';
 interface DrawerProps {
   opened: boolean;
   close: () => void;
@@ -23,15 +24,15 @@ export function NavDrawer(props: DrawerProps) {
         <DrawerContent
           pricing={
             <NavLink
+              // I dont like this.
+              className={clsx({
+                hidden: !isServer() ? window.location.pathname !== '/' : false,
+              })}
               label="Pricing"
               classNames={{ label: `text-2xl` }}
               component="a"
               onClick={() => {
                 props.close();
-                window.scrollTo({
-                  top: document.body.scrollHeight,
-                  behavior: 'smooth',
-                });
               }}
               href="#pricing"
             />
