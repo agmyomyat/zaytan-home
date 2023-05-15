@@ -12,19 +12,19 @@ export function Pricing() {
         <PricingHeader />
       </div>
       <div className="flex gap-4 lg:flex-row flex-col">
-        <div className={classes.cardContainer}>
+        <div className={twClasses.cardContainer}>
           <StarterPlan />
         </div>
-        <div className={classes.cardContainer}>
+        <div className={twClasses.cardContainer}>
           <BasicPlan />
         </div>
-        <div className={classes.cardContainer}>
+        <div className={twClasses.cardContainer}>
           <AdvancePlan />
         </div>
       </div>
     </>
   );
 }
-const classes = {
+const twClasses = {
   cardContainer: 'lg:w-1/3 w-full ',
 };
