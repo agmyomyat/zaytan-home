@@ -1,7 +1,5 @@
-import { Flex, Grid, createStyles } from '@mantine/core';
 import { BasicPlan } from './plans/basic';
 import { StarterPlan } from './plans/starter';
-import { PricingCard } from './pricing-card';
 import { AdvancePlan } from './plans/advance';
 import { PricingHeader } from './header';
 
