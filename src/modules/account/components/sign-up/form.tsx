@@ -1,20 +1,47 @@
+import { isLinkValid } from '@/utils/link-validation';
 import { TextInput, Checkbox, Button, Group, Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
-export function SignUpform() {
-  const form = useForm({
+import { SignUpForm } from '../../sign-up.interface';
+export function SignUpform(props: {
+  submit: (values: SignUpForm) => void;
+  submitting: boolean;
+}) {
+  const form = useForm<SignUpForm>({
     initialValues: {
       email: '',
-      termsOfService: false,
+      merchant_name: '',
+      phone_number: '',
+      page_link: '',
+      shop_name: '',
     },
 
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      phone_number: (value) =>
+        value.length !== 11 || value[0] != '0' ? 'Invalid phone number' : null,
+      merchant_name: (value) => (value.length < 1 ? 'Name is required' : null),
+      page_link: (value) => (!isLinkValid(value) ? 'Invalid page link' : null),
+      shop_name: (value) =>
+        value.length < 1 ? 'Your shop name is required' : null,
     },
   });
 
   return (
-    <Box maw={300} mx="auto">
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
+    <Box maw={'100%'} w={500}>
+      <form
+        className="flex flex-col gap-3"
+        onSubmit={form.onSubmit((values) => {
+          form.reset();
+          props.submit(values);
+        })}
+      >
+        <TextInput
+          withAsterisk
+          classNames={{ input: 'focus-within:border-sencondary' }}
+          label="Your Name"
+          placeholder="Aung Aung"
+          {...form.getInputProps('merchant_name')}
+        />
         <TextInput
           withAsterisk
           classNames={{ input: 'focus-within:border-sencondary' }}
@@ -22,15 +49,38 @@ export function SignUpform() {
           placeholder="your@email.com"
           {...form.getInputProps('email')}
         />
-
-        <Checkbox
-          mt="md"
-          label="I agree to sell my privacy"
-          {...form.getInputProps('termsOfService', { type: 'checkbox' })}
+        <TextInput
+          withAsterisk
+          classNames={{
+            input: 'focus-within:border-sencondary',
+          }}
+          label="Phone Number"
+          placeholder="0977xxxxxxx"
+          {...form.getInputProps('phone_number')}
         />
-
+        <TextInput
+          withAsterisk
+          classNames={{ input: 'focus-within:border-sencondary' }}
+          label="Your page name"
+          placeholder="H&M"
+          {...form.getInputProps('shop_name')}
+        />
+        <TextInput
+          withAsterisk
+          classNames={{ input: 'focus-within:border-sencondary' }}
+          label="Your page link"
+          placeholder="https://www.facebook.com/H&M"
+          {...form.getInputProps('page_link')}
+        />
         <Group position="right" mt="md">
-          <Button type="submit">Submit</Button>
+          <Button
+            loading={props.submitting}
+            disabled={props.submitting}
+            color="dark"
+            type="submit"
+          >
+            Submit
+          </Button>
         </Group>
       </form>
     </Box>
