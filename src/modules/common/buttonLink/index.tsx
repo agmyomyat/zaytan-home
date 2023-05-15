@@ -1,4 +1,4 @@
-import { Button, Anchor, MantineSize, ButtonProps } from '@mantine/core';
+import { Button, Anchor, MantineSize, ButtonProps, clsx } from '@mantine/core';
 import Link from 'next/link';
 import { HTMLAttributeAnchorTarget } from 'react';
 export const ButtonExternalLink: React.FC<
@@ -38,12 +38,14 @@ export const ButtonInternalLink: React.FC<
   return (
     <Link
       href={href}
-      className="w-full text-white no-underline"
+      className={clsx('text-white no-underline', className)}
       target={target}
     >
       <Button
         size={size || 'md'}
-        classNames={{ root: 'hover:!bg-gray-700 bg-gray-900 rounded-lg' }}
+        classNames={{
+          root: 'hover:!bg-gray-700 bg-gray-900 rounded-lg w-full',
+        }}
         {...rest}
       >
         {children}
