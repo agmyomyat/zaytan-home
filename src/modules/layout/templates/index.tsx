@@ -12,7 +12,11 @@ export const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <div className="fixed top-0 w-full z-10">
-        {matches ? <DesktopNav router={router} /> : <MobileNav />}
+        {matches ? (
+          <DesktopNav router={router} />
+        ) : (
+          <MobileNav router={router} />
+        )}
       </div>
       {children}
       <div className="pb-5">
