@@ -41,6 +41,11 @@ export const PricingCard: React.FC<PricingCardProps & CardProps> & {
     </div>
   );
 };
+/**
+ *
+ * @Note bg-gradient not working for exactly what reason i dont know about if you figure it out replace with this
+ * 'text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#eb346b]':
+ */
 
 const Header: React.FC<HeaderProps> = (props) => {
   return (
@@ -48,8 +53,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       <Text
         size={'xl'}
         className={clsx({
-          'text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-[#eb346b]':
-            props.recommend,
+          'text-transparent bg-clip-text bg-[#eb346b]': props.recommend,
         })}
         fw={'bold'}
       >
