@@ -4,4 +4,5 @@ export interface SignUpForm {
   phone_number: string;
   page_link: string;
   shop_name: string;
+  plan: string;
 }

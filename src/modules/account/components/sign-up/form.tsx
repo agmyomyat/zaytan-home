@@ -1,7 +1,8 @@
 import { isLinkValid } from '@/utils/link-validation';
-import { TextInput, Checkbox, Button, Group, Box } from '@mantine/core';
+import { TextInput, Button, Group, Box, NativeSelect } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { SignUpForm } from '../../sign-up.interface';
+import { ZAYTAN_PLANS } from './sign-up.constants';
 export function SignUpform(props: {
   submit: (values: SignUpForm) => void;
   submitting: boolean;
@@ -13,6 +14,7 @@ export function SignUpform(props: {
       phone_number: '',
       page_link: '',
       shop_name: '',
+      plan: '',
     },
 
     validate: {
@@ -71,6 +73,13 @@ export function SignUpform(props: {
           label="Your page link"
           placeholder="https://www.facebook.com/H&M"
           {...form.getInputProps('page_link')}
+        />
+        <NativeSelect
+          data={ZAYTAN_PLANS}
+          label="what plan are you interest in?"
+          withAsterisk
+          classNames={{ input: 'focus-within:border-sencondary' }}
+          {...form.getInputProps('plan')}
         />
         <Group position="right" mt="md">
           <Button

@@ -11,3 +11,6 @@ export default {
 const Template: StoryFn<typeof SignUpform> = (args) => <SignUpform {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  submit: (values) => console.log(values),
+};
