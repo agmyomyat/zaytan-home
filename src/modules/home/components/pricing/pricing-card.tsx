@@ -26,7 +26,7 @@ export const PricingCard: React.FC<PricingCardProps & CardProps> & {
   return (
     <div
       className={clsx({
-        'border-transparent  bg-clip-border bg-gradient-to-r p-0.5 rounded-2xl from-orange-500 to-[#eb346b]':
+        'border-transparent  bg-clip-border bg-[#eb346b] p-0.5 rounded-2xl ':
           recommend,
       })}
     >
