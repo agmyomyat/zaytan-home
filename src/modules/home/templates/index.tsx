@@ -3,6 +3,7 @@ import {
   HeroSectionOne,
   HeroSectionThree,
   HeroSectionTwo,
+  PaymentIntegrationSection,
 } from '../components/hero';
 import { Pricing } from '../components/pricing';
 import { useRouter } from 'next/router';
@@ -34,15 +35,21 @@ export default function Home() {
       <div className="py-20">
         <HeroSectionThree />
       </div>
-      <div ref={pricingRef} className={twClasses.pricingBgContainer}>
-        <div className="m-5">
-          <Pricing />
+      <div className={twClasses.paymentIntegrationSectionBgContainer}>
+        <div className="my-20">
+          <PaymentIntegrationSection />
+        </div>
+        <div ref={pricingRef} className={twClasses.pricingBgContainer}>
+          <div className="m-5">
+            <Pricing />
+          </div>
         </div>
       </div>
     </>
   );
 }
 const twClasses = {
+  paymentIntegrationSectionBgContainer: `w-full bg-gray-50 overflow-hidden`,
   sectionTwoBgContainer: `w-full bg-gray-50 overflow-hidden`,
   pricingBgContainer: `w-full bg-orange-200 overflow-hidden`,
 };
