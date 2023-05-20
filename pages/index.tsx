@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Zaytan|Home</title>
+        <title>Zaytan | Home</title>
         <meta
           name="Ecommerce"
           content="Affordable ecommerce platform in myanmar"
