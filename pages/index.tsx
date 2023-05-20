@@ -6,8 +6,11 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Zaytan</title>
-        <meta name="description" content="Home" />
+        <title>Zaytan|Home</title>
+        <meta
+          name="Ecommerce"
+          content="Affordable ecommerce platform in myanmar"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
