@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <HeroSectionOne />
+      <HeroSectionOne router={router} />
       <div className={twClasses.sectionTwoBgContainer}>
         <div className="xl:mx-52 mx-5 my-28">
           <HeroSectionTwo router={router} />

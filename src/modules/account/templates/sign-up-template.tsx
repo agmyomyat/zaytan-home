@@ -3,10 +3,12 @@ import { Title } from '@mantine/core';
 import { signUpRequest } from '../sign-up.request';
 import { useState } from 'react';
 import FormSuccessModal from '../components/sign-up/modals/form-success-modal';
+import { useRouter } from 'next/router';
 type MODAL_TYPE = 'success' | 'error' | false;
 export function SignUpTemplatePage() {
   const [submitting, setSubmitting] = useState(false);
   const [openModal, setOpenModal] = useState<MODAL_TYPE>(false);
+  const router = useRouter();
 
   return (
     <div className="py-16 relative w-full bg-gray-100 h-screen">
@@ -15,6 +17,7 @@ export function SignUpTemplatePage() {
           Provide your business information
         </Title>
         <SignUpform
+          router={router}
           submit={(values) => {
             setSubmitting(true);
             signUpRequest(values)

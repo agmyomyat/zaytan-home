@@ -1,8 +1,8 @@
-import { Button, TextInput } from '@mantine/core';
+import { Button, TextInput, TextInputProps } from '@mantine/core';
 import { useState } from 'react';
-interface Props {
-  onClick: (value: string) => void;
-}
+type Props = {
+  buttonSubmit: (value: string) => void;
+} & TextInputProps;
 export function SectionOneInput(props: Props) {
   const [state, setState] = useState('');
   return (
@@ -18,7 +18,7 @@ export function SectionOneInput(props: Props) {
       <Button
         className="bg-black hover:!bg-gray-700 rounded-lg max-w-full"
         size={'md'}
-        onClick={() => props.onClick(state)}
+        onClick={() => props.buttonSubmit(state)}
       >
         Join now
       </Button>
