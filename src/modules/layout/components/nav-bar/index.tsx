@@ -1,7 +1,7 @@
 interface NavProps {
   children: React.ReactNode;
 }
-export const NavBar: React.FC<NavProps> & {
+export const NavBarContainer: React.FC<NavProps> & {
   LeftSide: React.FC<NavProps>;
   RightSide: React.FC<NavProps>;
 } = ({ children }) => {
@@ -17,8 +17,8 @@ const LeftSideContent: React.FC<NavProps> = ({ children }) => {
 const RightSideContent: React.FC<NavProps> = ({ children }) => {
   return <div className={twClasses.rightSideContainer}>{children}</div>;
 };
-NavBar.LeftSide = LeftSideContent;
-NavBar.RightSide = RightSideContent;
+NavBarContainer.LeftSide = LeftSideContent;
+NavBarContainer.RightSide = RightSideContent;
 const twClasses = {
   bgContainer: `bg-white  border-gray-100  border-0 border-solid border-b-[2px]`,
   container: `flex justify-between p-4 xl:mx-48`,

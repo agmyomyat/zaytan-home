@@ -5,14 +5,14 @@ import {
 } from '@/modules/common/buttonLink';
 import { Text, Anchor, clsx } from '@mantine/core';
 
-import { NavBar } from '../nav-bar';
+import { NavBarContainer } from '../nav-bar';
 import { DemoMenu } from './demo-menu';
 import { type NextRouter } from 'next/router';
 import { LOGIN_LINK, SIGNUP_LINK } from '../../layout.constants';
 export function DesktopNav(props: { router: NextRouter }) {
   return (
-    <NavBar>
-      <NavBar.LeftSide>
+    <NavBarContainer>
+      <NavBarContainer.LeftSide>
         <div
           className="flex gap-1 hover:cursor-pointer"
           onClick={() => props.router.push('/')}
@@ -36,8 +36,8 @@ export function DesktopNav(props: { router: NextRouter }) {
         >
           Pricing
         </Anchor>
-      </NavBar.LeftSide>
-      <NavBar.RightSide>
+      </NavBarContainer.LeftSide>
+      <NavBarContainer.RightSide>
         <Anchor
           className="text-black text-lg"
           target={'_blank'}
@@ -46,7 +46,7 @@ export function DesktopNav(props: { router: NextRouter }) {
           Login
         </Anchor>
         <ButtonInternalLink href={SIGNUP_LINK}>Sign Up</ButtonInternalLink>
-      </NavBar.RightSide>
-    </NavBar>
+      </NavBarContainer.RightSide>
+    </NavBarContainer>
   );
 }
