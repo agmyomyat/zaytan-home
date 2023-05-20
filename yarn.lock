@@ -4863,6 +4863,11 @@ electron-to-chromium@^1.4.284:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.391.tgz#197994210792e29e39baf3ce807df42f66e9b5f8"
   integrity sha512-GqydVV1+kUWY5qlEzaw34/hyWTApuQrHiGrcGA2Kk/56nEK44i+YUW45VH43JuZT0Oo7uY8aVtpPhBBZXEWtSA==
 
+embla-carousel-autoplay@^8.0.0-rc03:
+  version "8.0.0-rc03"
+  resolved "https://registry.yarnpkg.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc03.tgz#1e5d8a2e21791f7f9989818a6c1f2d1545b49cc1"
+  integrity sha512-AEMoMAsOG5mpL2TidI6CfbfS9MSF0oQFoyy69s77HZVkTs2jmkP4TFxjsplFX0URjYsvsTL0jc67MMacrpP2jw==
+
 embla-carousel-react@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.1.0.tgz#e716f4df7fd31f7ca3e59a3e011158167bc3c468"
