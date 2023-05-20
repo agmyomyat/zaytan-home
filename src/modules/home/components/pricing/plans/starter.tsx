@@ -22,7 +22,9 @@ export const StarterPlan = () => {
         </PricingButton>
       </PricingCard.Pricing>
       <PricingCard.Detail>
+        <TextWithCheckIcon>Your own store</TextWithCheckIcon>
         <TextWithCheckIcon>Unlimited products</TextWithCheckIcon>
+        <TextWithCheckIcon>Admin dashboard</TextWithCheckIcon>
         <TextWithCheckIcon>Storage 500 MB</TextWithCheckIcon>
         <TextWithCheckIcon>48 hours support response time</TextWithCheckIcon>
       </PricingCard.Detail>
