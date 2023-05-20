@@ -40,16 +40,6 @@ const config: StorybookConfig= {
     // customize the Vite config here
     Object.assign(config.resolve.alias, {
       '@': resolve('src'),
-      '@static': resolve('src/static'),
-      '@components': resolve('src/components'),
-      '@containers': resolve('src/containers'),
-      '@pages': resolve('src/pages'),
-      '@web3': resolve('src/web3'),
-      '@reducers': resolve('src/store/reducers'),
-      '@selectors': resolve('src/store/selectors'),
-      '@sagas': resolve('src/store/sagas'),
-      '@consts': resolve('src/store/consts'),
-      '@store': resolve('src/store')
     })
     config.define = { 'process.env.NODE_DEBUG': 'false' }
     // return the customized config
