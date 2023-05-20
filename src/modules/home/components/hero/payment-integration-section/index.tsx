@@ -32,4 +32,5 @@ const PAYMENT_LOGOS: PaymentLogosDataType = [
   { path: './bank_logos/wavepay.png', alt: 'Wavepay logo' },
   { path: './bank_logos/mastercard.png', alt: 'Mastercard logo' },
   { path: './bank_logos/uab.png', alt: 'Uab logo' },
+  { path: './bank_logos/visa.png', alt: 'Visa logo' },
 ];
