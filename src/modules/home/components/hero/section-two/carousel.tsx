@@ -1,5 +1,8 @@
 import { Carousel } from '@mantine/carousel';
 import { createStyles, Paper, Text, rem } from '@mantine/core';
+import Autoplay from 'embla-carousel-autoplay';
+import useEmblaCarousel from 'embla-carousel-react';
+import { useEffect, useRef } from 'react';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -56,8 +59,8 @@ const data = [
     category: 'Demo',
   },
 ];
-
 export function SectionTwoCarousel() {
+  const ref = useRef(Autoplay({ delay: 4000 }));
   const slides = data.map((item) => (
     <Carousel.Slide key={item.title}>
       <Card {...item} />
@@ -66,6 +69,8 @@ export function SectionTwoCarousel() {
 
   return (
     <Carousel
+      loop
+      plugins={[ref.current]}
       className="w-full border-solid border-[1px] border-gray-200"
       slideSize="100%"
       breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
