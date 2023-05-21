@@ -10,7 +10,7 @@ export function HeroSectionTwoHeader(props: { getStartedButton: JSX.Element }) {
         ta="center"
         fw={400}
       >
-        Get you own store and start selling
+        Get your own store and start selling
       </Text>
       {props.getStartedButton}
     </div>
