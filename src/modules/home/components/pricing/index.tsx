@@ -2,8 +2,9 @@ import { BasicPlan } from './plans/basic';
 import { StarterPlan } from './plans/starter';
 import { AdvancePlan } from './plans/advance';
 import { PricingHeader } from './header';
-
-export function Pricing() {
+type PricingProps = { orderNow: () => void };
+// Too many prop drilling. should fix it
+export function Pricing(props: PricingProps) {
   return (
     <>
       <div className="flex justify-center my-20">
@@ -11,7 +12,7 @@ export function Pricing() {
       </div>
       <div className="flex gap-4 lg:flex-row flex-col">
         <div className={twClasses.cardContainer}>
-          <StarterPlan />
+          <StarterPlan orderNow={props.orderNow} />
         </div>
         <div className={twClasses.cardContainer}>
           <BasicPlan />

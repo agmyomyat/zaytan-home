@@ -1,9 +1,11 @@
-import { PricingButton } from '../pricing-button';
 import { Text } from '@mantine/core';
 import { PricingCard } from '../pricing-card';
 import { TextWithCheckIcon } from '../text-with-check-icon';
-
-export const StarterPlan = () => {
+import { PricingButton } from '../pricing-button';
+type Props = {
+  orderNow: () => void;
+};
+export const StarterPlan = (props: Props) => {
   return (
     <PricingCard recommend h={500}>
       <PricingCard.Header recommend> Starter</PricingCard.Header>
@@ -17,7 +19,11 @@ export const StarterPlan = () => {
             /month
           </Text>
         </div>
-        <PricingButton className="mt-3 mb-5" variant="filled">
+        <PricingButton
+          onClick={props.orderNow}
+          className="mt-3 mb-5"
+          variant="filled"
+        >
           Order now
         </PricingButton>
       </PricingCard.Pricing>

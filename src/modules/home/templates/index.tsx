@@ -11,6 +11,9 @@ import { useRouter } from 'next/router';
 export default function Home() {
   const router = useRouter();
   const pricingRef = useRef<HTMLDivElement>(null);
+  function orderNow() {
+    return router.push('/signup');
+  }
   // this is some hacky way to make sure that the hash changes to the correct section
   useEffect(() => {
     const onHashChangeStart = (e: HashChangeEvent) => {
@@ -41,7 +44,7 @@ export default function Home() {
         </div>
         <div ref={pricingRef} className={twClasses.pricingBgContainer}>
           <div className="m-5">
-            <Pricing />
+            <Pricing orderNow={orderNow} />
           </div>
         </div>
       </div>

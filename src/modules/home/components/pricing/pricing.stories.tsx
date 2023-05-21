@@ -13,6 +13,6 @@ export default {
 } as ComponentMeta<typeof Pricing>;
 export const Template: ComponentStory<typeof Pricing> = (args) => (
   <div className="w-full h-fit">
-    <Pricing />
+    <Pricing {...args} />
   </div>
 );
