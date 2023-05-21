@@ -12,7 +12,7 @@ export default {
   //   },
 } as ComponentMeta<typeof HeroSectionOne>;
 const Template: ComponentStory<typeof HeroSectionOne> = (args) => (
-  <HeroSectionOne />
+  <HeroSectionOne {...args} />
 );
 
 export const Primary = Template.bind({});
