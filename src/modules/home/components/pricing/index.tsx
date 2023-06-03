@@ -21,6 +21,14 @@ export function Pricing(props: PricingProps) {
           <AdvancePlan />
         </div>
       </div>
+      <div className="flex justify-center my-10">
+        <p className="text-gray-800 text-center">
+          None of the plans include the price for payment integrations. Payment
+          integrations are optionals and if you want to integrate them,
+          Additional <span className="font-semibold">20000</span> kyats will be
+          added to the price of each plan.
+        </p>
+      </div>
     </>
   );
 }
