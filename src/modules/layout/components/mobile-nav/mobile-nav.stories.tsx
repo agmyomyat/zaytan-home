@@ -17,5 +17,5 @@ const Template: ComponentStory<typeof MobileNav> = (args) => (
 );
 export const Default = Template.bind({});
 Default.args = {
-  router: {} as NextRouter,
+  onLogoClick: () => null,
 };

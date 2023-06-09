@@ -27,7 +27,7 @@ function DesktopNav() {
   return (
     <>
       <div className="fixed w-full top-0">
-        <DesktopNav_ router={{} as NextRouter} />
+        <DesktopNav_ onLogoClick={() => null} shouldPricingHidden={false} />
       </div>
       <div className="mt-32">
         {Array.from(Array(5)).map((_, index) => (
@@ -48,7 +48,7 @@ function WithTransition_({ open }: { open: boolean }) {
     >
       {(styles) => (
         <div style={styles}>
-          <DesktopNav_ router={{} as NextRouter} />
+          <DesktopNav_ onLogoClick={() => null} shouldPricingHidden={false} />
         </div>
       )}
     </Transition>
