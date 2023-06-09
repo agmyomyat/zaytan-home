@@ -3,9 +3,8 @@ import { Text, Burger } from '@mantine/core';
 import { NavDrawer } from './drawer';
 import ZayTanIcon from '@/fundanmentals/icons/zaytan-icon';
 import { NavBarContainer } from '../nav-bar';
-import { NextRouter } from 'next/router';
 
-export function MobileNav(props: { router: NextRouter }) {
+export function MobileNav(props: { onLogoClick: () => void }) {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
@@ -15,7 +14,7 @@ export function MobileNav(props: { router: NextRouter }) {
         <NavBarContainer.LeftSide>
           <div
             className="flex gap-1 hover:cursor-pointer"
-            onClick={() => props.router.push('/')}
+            onClick={props.onLogoClick}
           >
             <ZayTanIcon size={30} />
             <Text

@@ -7,15 +7,17 @@ import { Text, Anchor, clsx } from '@mantine/core';
 
 import { NavBarContainer } from '../nav-bar';
 import { DemoMenu } from './demo-menu';
-import { type NextRouter } from 'next/router';
 import { LOGIN_LINK, SIGNUP_LINK } from '../../layout.constants';
-export function DesktopNav(props: { router: NextRouter }) {
+export function DesktopNav(props: {
+  onLogoClick: () => void;
+  shouldPricingHidden: boolean;
+}) {
   return (
     <NavBarContainer>
       <NavBarContainer.LeftSide>
         <div
           className="flex gap-1 hover:cursor-pointer"
-          onClick={() => props.router.push('/')}
+          onClick={() => props.onLogoClick()}
         >
           <ZayTanIcon size={30} />
           <Text
@@ -29,7 +31,8 @@ export function DesktopNav(props: { router: NextRouter }) {
         </div>
         <DemoMenu />
         <Anchor
-          className={clsx({ hidden: props.router.pathname !== '/' })}
+          // className={clsx({ hidden: props.router.pathname !== '/' })}
+          className={clsx({ hidden: props.shouldPricingHidden })}
           href="#pricing"
           size="lg"
           color="dark"

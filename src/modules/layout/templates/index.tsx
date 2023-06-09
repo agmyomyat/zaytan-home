@@ -13,9 +13,12 @@ export const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
     <>
       <div className="fixed top-0 w-full z-10">
         {matches ? (
-          <DesktopNav router={router} />
+          <DesktopNav
+            onLogoClick={() => router.push('/')}
+            shouldPricingHidden={router.pathname !== '/'}
+          />
         ) : (
-          <MobileNav router={router} />
+          <MobileNav onLogoClick={() => router.push('/')} />
         )}
       </div>
       {children}

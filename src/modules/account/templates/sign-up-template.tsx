@@ -17,7 +17,7 @@ export function SignUpTemplatePage() {
           Provide your business information
         </Title>
         <SignUpform
-          router={router}
+          emailRef={router.query.email_ref as string}
           submit={(values) => {
             setSubmitting(true);
             signUpRequest(values)

@@ -3,17 +3,14 @@ import { TextInput, Button, Group, Box, NativeSelect } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { SignUpForm } from '../../sign-up.interface';
 import { ZAYTAN_PLANS } from './sign-up.constants';
-import { NextRouter } from 'next/router';
 export function SignUpform(props: {
   submit: (values: SignUpForm) => void;
   submitting: boolean;
-  router: NextRouter;
+  emailRef: string | undefined;
 }) {
-  const router = props.router;
-  const email_ref = router.query.email_ref as string;
   const form = useForm<SignUpForm>({
     initialValues: {
-      email: email_ref ?? '',
+      email: props.emailRef ?? '',
       merchant_name: '',
       phone_number: '',
       page_link: '',
