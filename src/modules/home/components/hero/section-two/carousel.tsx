@@ -1,12 +1,19 @@
 import { Carousel } from '@mantine/carousel';
-import { createStyles, Paper, Text, rem } from '@mantine/core';
+import {
+  Image,
+  createStyles,
+  Paper,
+  Text,
+  rem,
+  AspectRatio,
+} from '@mantine/core';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect, useRef } from 'react';
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: rem(1000),
+    height: '100%',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -32,19 +39,7 @@ interface CardProps {
 
 function Card({ image, category }: CardProps) {
   const { classes } = useStyles();
-  return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
-      <Text className={classes.category} size="xs">
-        {category}
-      </Text>
-    </Paper>
-  );
+  return <Image className={classes.card} src={image} alt="Panda" />;
 }
 
 const data = [
