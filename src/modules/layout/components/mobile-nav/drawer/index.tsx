@@ -49,12 +49,12 @@ export function NavDrawer(props: DrawerProps) {
 function Header() {
   return (
     <div className="flex gap-1">
-      <ZayTanIcon size={30} />
       <Text
-        fz={20}
+        fz={25}
         italic={true}
         weight={550}
-        sx={{ fontFamily: 'sans-serif' }}
+        color="orange"
+        sx={{ fontFamily: 'monospace' }}
       >
         ZAYTAN
       </Text>

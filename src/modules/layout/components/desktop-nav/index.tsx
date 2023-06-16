@@ -19,12 +19,12 @@ export function DesktopNav(props: {
           className="flex gap-1 hover:cursor-pointer"
           onClick={() => props.onLogoClick()}
         >
-          <ZayTanIcon size={30} />
           <Text
-            fz={20}
+            fz={25}
             italic={true}
             weight={550}
-            sx={{ fontFamily: 'sans-serif' }}
+            sx={{ fontFamily: 'monospace' }}
+            color="orange"
           >
             ZAYTAN
           </Text>
