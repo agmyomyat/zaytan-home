@@ -1,1 +1,1 @@
-export const ZAYTAN_PLANS = ['Starter', 'Basic', 'Advance'];
+export const ZAYTAN_PLANS = ['STARTER', 'BASIC', 'ADVANCE'];
