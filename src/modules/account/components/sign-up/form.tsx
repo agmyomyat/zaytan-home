@@ -11,20 +11,20 @@ export function SignUpform(props: {
   const form = useForm<SignUpForm>({
     initialValues: {
       email: props.emailRef ?? '',
-      merchant_name: '',
-      phone_number: '',
-      page_link: '',
-      shop_name: '',
+      merchantName: '',
+      phoneNumber: '',
+      pageLink: '',
+      pageName: '',
       plan: '',
     },
 
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-      phone_number: (value) =>
+      phoneNumber: (value) =>
         value.length !== 11 || value[0] != '0' ? 'Invalid phone number' : null,
-      merchant_name: (value) => (value.length < 1 ? 'Name is required' : null),
-      page_link: (value) => (!isLinkValid(value) ? 'Invalid page link' : null),
-      shop_name: (value) =>
+      merchantName: (value) => (value.length < 1 ? 'Name is required' : null),
+      pageLink: (value) => (!isLinkValid(value) ? 'Invalid page link' : null),
+      pageName: (value) =>
         value.length < 1 ? 'Your shop name is required' : null,
     },
   });
@@ -43,7 +43,7 @@ export function SignUpform(props: {
           classNames={{ input: 'focus-within:border-sencondary' }}
           label="Your Name"
           placeholder="Aung Aung"
-          {...form.getInputProps('merchant_name')}
+          {...form.getInputProps('merchantName')}
         />
         <TextInput
           withAsterisk
@@ -59,21 +59,21 @@ export function SignUpform(props: {
           }}
           label="Phone Number"
           placeholder="0977xxxxxxx"
-          {...form.getInputProps('phone_number')}
+          {...form.getInputProps('phoneNumber')}
         />
         <TextInput
           withAsterisk
           classNames={{ input: 'focus-within:border-sencondary' }}
           label="Your page name"
           placeholder="H&M"
-          {...form.getInputProps('shop_name')}
+          {...form.getInputProps('pageName')}
         />
         <TextInput
           withAsterisk
           classNames={{ input: 'focus-within:border-sencondary' }}
           label="Your page link"
           placeholder="https://www.facebook.com/H&M"
-          {...form.getInputProps('page_link')}
+          {...form.getInputProps('pageLink')}
         />
         <NativeSelect
           data={ZAYTAN_PLANS}
