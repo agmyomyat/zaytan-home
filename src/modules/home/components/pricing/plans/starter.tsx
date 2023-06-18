@@ -4,6 +4,7 @@ import { TextWithCheckIcon } from '../text-with-check-icon';
 import { PricingButton } from '../pricing-button';
 type Props = {
   orderNow: () => void;
+  price: string;
 };
 export const StarterPlan = (props: Props) => {
   return (
@@ -14,7 +15,7 @@ export const StarterPlan = (props: Props) => {
       </PricingCard.Description>
       <PricingCard.Pricing>
         <div className="flex flex-row gap-1">
-          <Text className="text-2xl font-semibold">MMK 10000</Text>
+          <Text className="text-2xl font-semibold">MMK {props.price}</Text>
           <Text size="sm" className="mt-2">
             /month
           </Text>
