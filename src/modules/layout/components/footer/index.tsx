@@ -1,3 +1,4 @@
+import { FacebookIcon } from '@/fundanmentals/icons/fb-icon';
 import ZayTanIcon from '@/fundanmentals/icons/zaytan-icon';
 import {
   Text,
@@ -7,6 +8,8 @@ import {
   ActionIcon,
   rem,
 } from '@mantine/core';
+import Link from 'next/link';
+import { ZAYTAN_FB_LINK } from './footer.constants';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -46,18 +49,11 @@ export function Footer() {
           <Text>© 2023 Zaytan™</Text>
         </div>
         <Group spacing={0} className={classes.links} position="right" noWrap>
-          <ActionIcon size="lg">
-            {/* <IconBrandTwitter size="3rem" stroke={1.5} /> */}
-          </ActionIcon>
-          <ActionIcon size="lg">
-            {/* <IconBrandFacebook size="3rem" stroke={1.5} /> */}
-          </ActionIcon>
-          <ActionIcon size="lg">
-            {/* <IconBrandYoutube size="3rem" stroke={1.5} /> */}
-          </ActionIcon>
-          <ActionIcon size="lg">
-            {/* <IconBrandInstagram size="3rem" stroke={1.5} /> */}
-          </ActionIcon>
+          <Link href={ZAYTAN_FB_LINK} target="_blank">
+            <ActionIcon size="lg">
+              <FacebookIcon size={40} />
+            </ActionIcon>
+          </Link>
         </Group>
       </Container>
     </div>
