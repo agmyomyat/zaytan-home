@@ -5,7 +5,7 @@ import {
 } from '@/modules/common/buttonLink';
 import { Text, Anchor, clsx } from '@mantine/core';
 
-import { NavBarContainer } from '../nav-bar';
+import { NavBarContainer } from '../nav-bar-container';
 import { DemoMenu } from './demo-menu';
 import { LOGIN_LINK, SIGNUP_LINK } from '../../layout.constants';
 export function DesktopNav(props: {

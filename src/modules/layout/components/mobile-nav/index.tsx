@@ -2,7 +2,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Text, Burger } from '@mantine/core';
 import { NavDrawer } from './drawer';
 import ZayTanIcon from '@/fundanmentals/icons/zaytan-icon';
-import { NavBarContainer } from '../nav-bar';
+import { NavBarContainer } from '../nav-bar-container';
 
 export function MobileNav(props: { onLogoClick: () => void }) {
   const [opened, { open, close }] = useDisclosure(false);
