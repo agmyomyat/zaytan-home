@@ -31,14 +31,14 @@ export function Pricing(props: PricingProps) {
               '!bg-black !text-white': payContract === 'EVERY_6_MONTHS',
             })}
           >
-            Pay Every 6 Months (Save 23%)
+            Pay Every 6 Months (Save 25%)
           </Button>
         </div>
       </div>
       <div className="flex gap-4 lg:flex-row flex-col">
         <div className={twClasses.cardContainer}>
           <StarterPlan
-            price={payContract === 'EVERY_6_MONTHS' ? '10000' : '13000'}
+            price={payContract === 'EVERY_6_MONTHS' ? '9000' : '12000'}
             orderNow={props.orderNow}
           />
         </div>
