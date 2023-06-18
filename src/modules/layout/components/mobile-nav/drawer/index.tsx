@@ -51,7 +51,6 @@ function Header() {
     <div className="flex gap-1">
       <Text
         fz={25}
-        italic={true}
         weight={550}
         color="orange"
         sx={{ fontFamily: 'monospace' }}

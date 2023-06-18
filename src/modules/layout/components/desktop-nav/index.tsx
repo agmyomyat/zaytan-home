@@ -4,6 +4,7 @@ import { Text, Anchor, clsx } from '@mantine/core';
 import { NavBarContainer } from '../nav-bar-container';
 import { DemoMenu } from './demo-menu';
 import { LOGIN_LINK, SIGNUP_LINK } from '../../layout.constants';
+import { NavLogo } from '../nav-logo';
 export function DesktopNav(props: {
   onLogoClick: () => void;
   shouldPricingHidden: boolean;
@@ -11,18 +12,8 @@ export function DesktopNav(props: {
   return (
     <NavBarContainer>
       <NavBarContainer.LeftSide>
-        <div
-          className=" hover:cursor-pointer mr-6"
-          onClick={() => props.onLogoClick()}
-        >
-          <Text
-            fz={25}
-            weight={550}
-            sx={{ fontFamily: 'sans-serif' }}
-            color="orange"
-          >
-            ZAYTAN
-          </Text>
+        <div onClick={() => props.onLogoClick()} className="mr-3">
+          <NavLogo />
         </div>
         <DemoMenu />
         <Anchor
