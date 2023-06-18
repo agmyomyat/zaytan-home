@@ -12,7 +12,7 @@ export function DesktopNav(props: {
     <NavBarContainer>
       <NavBarContainer.LeftSide>
         <div
-          className="flex gap-1 hover:cursor-pointer"
+          className=" hover:cursor-pointer mr-6"
           onClick={() => props.onLogoClick()}
         >
           <Text

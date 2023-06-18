@@ -20,7 +20,7 @@ const RightSideContent: React.FC<NavProps> = ({ children }) => {
 NavBarContainer.LeftSide = LeftSideContent;
 NavBarContainer.RightSide = RightSideContent;
 const twClasses = {
-  bgContainer: `bg-white  border-gray-100  border-0 border-solid border-b-[2px]`,
+  bgContainer: `bg-white opacity-80 border-gray-400 border-0 border-solid border-b-[1px]`,
   container: `flex justify-between p-4 xl:mx-48`,
   leftSideContainer: `flex gap-3 items-center`,
   rightSideContainer: `flex gap-5 items-center `,
