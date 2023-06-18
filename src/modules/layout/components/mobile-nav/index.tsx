@@ -18,9 +18,8 @@ export function MobileNav(props: { onLogoClick: () => void }) {
           >
             <Text
               fz={25}
-              italic={true}
               weight={550}
-              sx={{ fontFamily: 'monospace' }}
+              sx={{ fontFamily: 'sans-serif' }}
               color="orange"
             >
               ZAYTAN

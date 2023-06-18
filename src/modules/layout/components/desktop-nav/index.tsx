@@ -1,8 +1,4 @@
-import ZayTanIcon from '@/fundanmentals/icons/zaytan-icon';
-import {
-  ButtonExternalLink,
-  ButtonInternalLink,
-} from '@/modules/common/buttonLink';
+import { ButtonInternalLink } from '@/modules/common/buttonLink';
 import { Text, Anchor, clsx } from '@mantine/core';
 
 import { NavBarContainer } from '../nav-bar-container';
@@ -21,9 +17,8 @@ export function DesktopNav(props: {
         >
           <Text
             fz={25}
-            italic={true}
             weight={550}
-            sx={{ fontFamily: 'monospace' }}
+            sx={{ fontFamily: 'sans-serif' }}
             color="orange"
           >
             ZAYTAN
