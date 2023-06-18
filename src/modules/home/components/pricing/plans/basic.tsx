@@ -19,9 +19,7 @@ export const BasicPlan = () => {
         <TextWithCheckIcon>Storage 2 GB</TextWithCheckIcon>
         <TextWithCheckIcon>24 hours support response time</TextWithCheckIcon>
         <TextWithCheckIcon>Discount your products</TextWithCheckIcon>
-        <TextWithCheckIcon>
-          Promote your products with special prices
-        </TextWithCheckIcon>
+        <TextWithCheckIcon>Sales promotion</TextWithCheckIcon>
         <TextWithCheckIcon>Gift cards</TextWithCheckIcon>
       </PricingCard.Detail>
     </PricingCard>
