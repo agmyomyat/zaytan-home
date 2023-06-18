@@ -63,7 +63,7 @@ export function Pricing(props: PricingProps) {
 const twClasses = {
   cardContainer: 'lg:w-1/3 w-full ',
   contractOption:
-    'text-black bg-transparent hover:bg-inherit outline-none border-none rounded-full  h-12',
+    'text-black max-w-full bg-transparent hover:bg-inherit outline-none border-none rounded-lg sm:rounded-full  h-12',
   optionsContainer:
-    'border-[2px] border-solid  border-[#eb346b] rounded-full p-1 mb-4',
+    'flex sm:flex-row flex-col border-[2px] border-solid  border-[#eb346b] rounded-lg sm:rounded-full p-1 mb-4',
 };
