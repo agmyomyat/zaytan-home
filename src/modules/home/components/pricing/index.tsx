@@ -53,8 +53,8 @@ export function Pricing(props: PricingProps) {
         <p className="text-gray-800 text-center">
           None of the plans include the price for payment integrations. Payment
           integrations are optionals and if you want to integrate them,
-          Additional <span className="font-semibold">20000</span> kyats will be
-          added to the price of each plan.
+          Additional charges will be added to the price of each plan. contact us
+          if you want to integrate payments solutions
         </p>
       </div>
     </>
