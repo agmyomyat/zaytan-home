@@ -33,7 +33,7 @@ export const StarterPlan = (props: Props) => {
         <TextWithCheckIcon>Unlimited products</TextWithCheckIcon>
         <TextWithCheckIcon>Admin dashboard</TextWithCheckIcon>
         <TextWithCheckIcon>Storage 500 MB</TextWithCheckIcon>
-        <TextWithCheckIcon>48 hours support response time</TextWithCheckIcon>
+        <TextWithCheckIcon>24/7 support</TextWithCheckIcon>
       </PricingCard.Detail>
     </PricingCard>
   );

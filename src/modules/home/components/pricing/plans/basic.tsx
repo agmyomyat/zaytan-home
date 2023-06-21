@@ -17,7 +17,7 @@ export const BasicPlan = () => {
       <PricingCard.Detail>
         <TextWithCheckIcon>Everything in starter plus</TextWithCheckIcon>
         <TextWithCheckIcon>Storage 2 GB</TextWithCheckIcon>
-        <TextWithCheckIcon>24 hours support response time</TextWithCheckIcon>
+        <TextWithCheckIcon>24/7 support </TextWithCheckIcon>
         <TextWithCheckIcon>Discount your products</TextWithCheckIcon>
         <TextWithCheckIcon>Sales promotion</TextWithCheckIcon>
         <TextWithCheckIcon>Gift cards</TextWithCheckIcon>
